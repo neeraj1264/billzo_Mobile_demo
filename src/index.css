@@ -1,0 +1,139 @@
+body {
+  margin: 0;
+}
+body.dark-theme {
+  background-color: var(--out); /* Dark background */
+  color: var(--light); /* Light text */
+}
+
+/* ---------------------navbar-------------------- */
+
+body.dark-theme .navbar {
+  background-color: var(--in); /* Dark navbar */
+}
+
+body.dark-theme .navbar-brand,
+body.dark-theme .nav-link {
+  color: var(--light); /* Light text on navbar items */
+}
+
+body.dark-theme .form-control {
+  background-color: #333;
+}
+
+body.dark-theme input::placeholder {
+  color: var(--light);
+  opacity: 1;
+}
+body.dark-theme .custom-modal-content {
+  background: var(--in);
+  color: var(--light);
+}
+body.dark-theme .login-form {
+  background: var(--out);
+}
+
+/* -------------------------Add Product page ------------------------ */
+
+body.dark-theme .catologue-input-fields {
+  background: var(--in);
+}
+body.dark-theme .catologue-input-fields h1 {
+  color: var(--light);
+}
+body.dark-theme input {
+  background-color: var(--out);
+  color: var(--light);
+}
+body.dark-theme .dropdownn {
+  background-color: var(--out);
+  color: var(--light);
+}
+body.dark-theme .order-lable h2 {
+  color: var(--light);
+}
+body.dark-theme .order-section {
+  background: var(--in);
+}
+body.dark-theme .products-table th {
+  background: var(--in);
+}
+/* -------------------------history page ------------------------ */
+
+body.dark-theme .total-sale select {
+  background: var(--in);
+  color: var(--light);
+  box-shadow: none;
+}
+/* -------------------------invoice page ------------------------ */
+
+body.dark-theme .main {
+  background-color: var(--out);
+}
+
+body.dark-theme .category-container {
+  background: var(--in);
+  color: var(--light);
+}
+
+body.dark-theme .category {
+  background: var(--in);
+  color: var(--light);
+}
+
+body.dark-theme .p-name {
+  color: var(--light);
+}
+body.dark-theme .add-btn {
+  background-color: var(--out);
+}
+body.dark-theme .invoice-btn button {
+  color: var(--out);
+}
+body.dark-theme .invoice-kot-btn {
+  background: var(--out);
+  }
+body.dark-theme .customise-text {
+  color: var(--bg);
+}
+body.dark-theme .popup-contentt {
+  background: var(--in);
+}
+body.dark-theme .close-icon {
+  color: var(--bg);
+}
+body.dark-theme .popup-contentt h3 {
+  color: var(--light);
+}
+body.dark-theme .variety-label span {
+  color: var(--light);
+}
+
+body.dark-theme .category-bar button{
+  background: var(--out);
+}
+
+body.dark-theme .category-bar{
+background: var(--in);
+/* box-shadow: 2px 2px 2px 2px var(--in); */
+}
+
+/* -------------------------customer detail page ------------------------ */
+
+body.dark-theme .cust-inputs input {
+  background: var(--in);
+  color: var(--light);
+}
+body.dark-theme .done {
+  color: var(--out);
+}
+body.dark-theme .popupContent {
+  background: var(--in);
+}
+body.dark-theme .popupContent h2 {
+  color: var(--light);
+}
+body.dark-theme .popupButton {
+  background: var(--out);
+  color: var(--light);
+}

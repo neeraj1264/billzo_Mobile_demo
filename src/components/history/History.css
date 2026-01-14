@@ -1,0 +1,251 @@
+.history-container {
+  margin: 2rem .3rem;
+  font-family: Arial, sans-serif;
+}
+.back-arrow {
+  color: white;
+  font-size: 1.4rem !important;
+  position: relative;
+  top: 4px;
+}
+.header {
+  font-size: 1.4rem;
+  color: white;
+}
+.history-header {
+  text-align: center;
+  background: var(--bg);
+  color: white;
+  font-size: 1rem;
+  margin: 0;
+  padding: 0.5rem;
+  border-radius: 0 0 1rem 1rem;
+  box-shadow: 2px 2px 6px 2px black;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0;
+  align-items: baseline;
+}
+
+h1,
+h2 {
+  color: #333;
+}
+.total-sale {
+  /* background: var(--bg); */
+  width: fit-content;
+  margin: auto;
+  padding: 0.4rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  /* box-shadow: 2px 2px 2px 2px var(--bg); */
+  font-weight: 700;
+}
+.total-sale select {
+     text-align: center;
+    padding: 0.5rem;
+    /* background: var(--bg); */
+    color: var(--bg);
+    font-weight: bold;
+    box-shadow: 2px 2px 8px var(--bg);
+    border: 3px solid var(--bg);
+}
+
+.details-table,
+.products-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2rem;
+  table-layout: fixed;   
+}
+
+.details-table th,
+.details-table td,
+.products-table th,
+.products-table td {
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.details-table th,
+.products-table th {
+  background-color: #f4f4f4;
+  font-weight: bold;
+  text-align: center;
+}
+
+.details-table td {
+  background-color: #f9f9f9;
+}
+
+.products-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.products-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.amount {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #4caf50;
+}
+
+hr{
+  margin: 1rem 0;
+  color: inherit;
+  border-top: var(--bs-border-width) solid;
+  opacity: .25;
+}
+.whatsapp {
+  position: absolute;
+  font-size: 2rem;
+  right: 2rem;
+  background-color: #25D366;
+  color: white;
+  border-radius: 50%;
+  padding: .3rem;
+  animation: pulsate 1s infinite;
+}
+
+.custom-modal-content-history{
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+  background: red;
+}
+
+.custom-modal-message-history{
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: white;
+}
+
+.confirm-button-history{
+  margin: auto;
+  padding: .5rem 1rem;
+}
+.order-lable{
+     padding: 1rem;
+    background: #f9fafb;
+    border-radius: 1rem;
+}
+.order-lable h2{
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* give explicit widths to Price, Qty, Total columns */
+.products-table th:nth-child(2),
+.products-table td:nth-child(2) { width: 55px; }  /* Price */
+.products-table th:nth-child(3),
+.products-table td:nth-child(3) { width: 45px; }  /* Qty */
+.products-table th:nth-child(4),
+.products-table td:nth-child(4) { width: 55px; }  /* Total */
+
+.deletebtn {
+  cursor: pointer;
+  color: red;
+  font-size: 2rem;
+  border: none;
+  padding: 0;
+  margin: 0;
+  /* background: white; */
+  /* border: navajowhite; */
+  /* position: absolute; */
+  width: fit-content;
+}
+
+
+
+
+.badge {
+  padding: 2px 8px 2px 1px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.bill-badge {
+  background: #e0f0ff;
+  color: #0077cc;
+}
+
+.order-badge {
+  background: #ffe0e6;
+  color: #cc0033;
+}
+
+.order-section{
+    background: white;
+    border-radius: 1rem;
+    padding: .5rem;
+    margin: .5rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+
+
+
+
+
+
+
+
+
+
+.order-lable h2{
+  cursor: pointer;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.order-lable {
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 1rem;
+}
+
+.payment-totals {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem 0;
+}
+
+.cash-box, .upi-box {
+    padding: .3rem;
+    border-radius: 1rem 0rem;
+    text-align: center;
+    width: 45%;
+}
+
+.cash-box {
+  background-color: #e8f5e9;
+  border: 2px solid #4caf50;
+}
+
+.upi-box {
+  background-color: #e3f2fd;
+  border: 2px solid #2196f3;
+}
+
+.cash-box h3, .upi-box h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.cash-box h3 {
+    background: #e8f8f5;
+    color: #006753;
+}
+.upi-box h3{
+    background: #e3f2fd;
+    color: #0a314f;
+}
+.cash-box span, .upi-box span {
+  margin: 0 0 0 .5rem;
+  font-weight: bold;
+}
