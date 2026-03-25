@@ -11,7 +11,6 @@ import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import WhatsAppButton from "../Utils/WhatsappOrder";
 import RawBTPrintButton from "../Utils/RawBTPrintButton";
-import Rawbt3Inch from "../Utils/Rawbt3Inch";
 
 const toastOptions = {
   position: "bottom-right",
@@ -766,7 +765,7 @@ const CustomerDetail = () => {
             <button onClick={handlePngDownload} className="popupButton">
               Download Invoice
             </button>
-            <Rawbt3Inch
+            <RawBTPrintButton
               productsToSend={productsToSend}
               parsedDiscount={parsedDiscount}
               deliveryChargeAmount={parseFloat(deliveryCharge) || 0}
