@@ -457,7 +457,7 @@ const topItem = getTopSellingItem();
                       {/* ICONS ROW */}
                       <tr>
                         <td colSpan={4} style={{ textAlign: "center" }}>
-                          <Rawbt3Inch
+                          <RawBTPrintButton
                             productsToSend={order.products}
                             customerPhone={order.phone}
                             customerName={order.name}
