@@ -328,9 +328,9 @@ const topItem = getTopSellingItem();
                 >
                     <div className="order-row">
                     Order {filteredOrders.length - index}
-                      <span className="badge bill-badge">
+                      {/* <span className="badge bill-badge">
                         Bill.no #{order.billNumber}
-                      </span>
+                      </span> */}
                       {/* <span className="badge order-badge">
                         Order.id RT_{order.orderNumber}
                       </span> */}
