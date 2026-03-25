@@ -159,12 +159,8 @@ hr{
   /* position: absolute; */
   width: fit-content;
 }
-
-
-
-
 .badge {
-  padding: 2px 8px 2px 1px;
+  padding: 2px 8px;
   border-radius: 6px;
   font-size: 0.8rem;
   font-weight: bold;
@@ -180,6 +176,24 @@ hr{
   color: #cc0033;
 }
 
+.order-date {
+  margin-left: auto;
+  font-size: 0.85rem;
+  color: #666;
+}
+.order-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 4px 0;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.order-row strong {
+  font-size: 0.95rem;
+  color: #222;
+}
 .order-section{
     background: white;
     border-radius: 1rem;

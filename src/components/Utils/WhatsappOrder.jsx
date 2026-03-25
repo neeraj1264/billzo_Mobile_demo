@@ -48,7 +48,7 @@ export default function WhatsAppButton({
 
     // Construct message
     let message = encodeURIComponent(
-      `*🍔🍕 Chicago Delight's 🍕🍔*\n\n` +
+      `*🍔🍕 Foodies Hub 🍕🍔*\n\n` +
         `Order: *${orderId}*` +
         (customerName ? `\nName: *${customerName}*` : "") +
         (customerPhone ? `\nPhone: *${customerPhone}*` : "") +

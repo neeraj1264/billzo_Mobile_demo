@@ -252,6 +252,48 @@ const OrderReport = () => {
       hour12: true,
     }).replace(/\//g, "-");
 
+      // Full item summary for selected period
+  const getItemSalesSummary = () => {
+    const summary = {};
+
+    filteredOrders.forEach((order) => {
+      order.products?.forEach((product) => {
+        const key = product.size
+          ? `${product.name} (${product.size})`
+          : product.name;
+
+        if (!summary[key]) {
+          summary[key] = {
+            quantity: 0,
+            revenue: 0,
+          };
+        }
+
+        summary[key].quantity += product.quantity || 1;
+        summary[key].revenue += (product.price || 0) * (product.quantity || 1);
+      });
+    });
+
+    return Object.entries(summary).sort(
+      (a, b) => b[1].quantity - a[1].quantity,
+    );
+  };
+
+  // Best seller card data
+  const getTopSellingItem = () => {
+    const summary = getItemSalesSummary();
+
+    if (!summary.length) return null;
+
+    return {
+      name: summary[0][0],
+      quantity: summary[0][1].quantity,
+      revenue: summary[0][1].revenue,
+    };
+  };
+
+  const topItem = getTopSellingItem();
+
   return (
     <>
       <Header />
@@ -293,6 +335,24 @@ const OrderReport = () => {
                 <h2 className="data-show">
                   Total Revenue: <strong>Rs.{totalRevenue.toFixed(2)}</strong>
                 </h2>
+
+                  {topItem && (
+                  <div className="best-seller-card">
+                    <div className="trophy">🏆</div>
+
+                    <div>
+                      <div className="best-title">
+                        Best Seller ({selectedPeriod})
+                      </div>
+
+                      <div className="best-item">{topItem.name}</div>
+
+                      <div className="best-stats">
+                        Sold: {topItem.quantity} | Revenue: ₹{topItem.revenue}
+                      </div>
+                    </div>
+                  </div>
+                )}
               </>
             )}
 
@@ -300,6 +360,34 @@ const OrderReport = () => {
               <p>No orders available for the selected period.</p>
             ) : (
               <>
+               {/* Pie Chart & Top 5 Selling Products Table */}
+                <h2 style={{ marginTop: "2rem" }}>
+                  Top 5 Selling Products (Pie Chart & Table)
+                </h2>
+                <canvas ref={pieChartRef} width={"50%"} height={"50%"} />
+                <div className="item-sales-summary">
+                  <div className="summary-header">
+                    <h3>Item Sales Summary ({selectedPeriod})</h3>
+
+                    <span className="summary-count">
+                      {getItemSalesSummary().length} items
+                    </span>
+                  </div>
+
+                  <div className="summary-list">
+                    {getItemSalesSummary().map(([name, data], index) => (
+                      <div key={name} className="summary-row">
+                        <span className="rank">#{index + 1}</span>
+
+                        <span className="item-name">{name}</span>
+
+                        <span className="item-qty">{data.quantity} sold -</span>
+
+                        <span className="item-qty">- ₹{data.revenue}</span>
+                      </div>
+                    ))}
+                  </div>
+                </div>
                 {/* Orders Table with expandable rows */}
                 <table
                   border="1"

@@ -1,5 +1,5 @@
 const fetchWithBaseUrl = async (endpoint, options = {}) => {
-  const BASE_URL = "https://invoice-foodieshub-backend.vercel.app/api";
+  const BASE_URL = "https://invoice-foodieshub-backend-z1g9.vercel.app/api";
   const response = await fetch(`${BASE_URL}${endpoint}`, options);
 
   if (!response.ok) {
